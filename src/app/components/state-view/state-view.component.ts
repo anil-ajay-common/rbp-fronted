@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ColumnSetting } from 'src/app/shared/components/grid/column-setting';
 import { State } from '@progress/kendo-data-query';
 import { DataStateChangeEvent } from '@progress/kendo-angular-grid';
+import { NotificationService } from 'src/app/services/notification/notification.service';
 
 @Component({
   selector: 'app-state-view',
@@ -50,7 +51,7 @@ export class StateViewComponent implements OnInit, AfterViewInit {
     }];
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private stateDao: StateDaoService) { }
+  constructor(private stateDao: StateDaoService, private notificationService: NotificationService) { }
 
   ngOnInit() {
     this.stateView = this.stateDao;
