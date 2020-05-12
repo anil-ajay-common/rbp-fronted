@@ -11,10 +11,13 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { StateViewComponent } from './components/state-view/state-view.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { MainGridComponent } from './shared/components/grid/grid.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, HeaderComponent, StateViewComponent, RoutingComponent
+    AppComponent, HomeComponent, HeaderComponent, StateViewComponent, RoutingComponent, MainGridComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { StateViewComponent } from './components/state-view/state-view.component
     CommonModule,
     SharedModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    GridModule
   ],
   providers: [],
   bootstrap: [AppComponent],
