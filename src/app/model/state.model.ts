@@ -3,6 +3,8 @@ export interface IState {
     stateName: string;
     modifiedBy: string;
     modifiedDate: string;
+    createdBy: string;
+    active: boolean;
 }
 
 export interface IPageable {

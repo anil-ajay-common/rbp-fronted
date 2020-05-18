@@ -6,8 +6,8 @@ export class BackendAppSettings {
 
     static endpoint = {
         getAllStates: {
-            getUrl(pageNo = 0, pageSize = 10, sortBy = 'id'): string {
-                const url = `states?pageNo=${pageNo}&pageSize=${pageSize}&sortBy=${sortBy}`;
+            getUrl(pageSize = 100, pageNo = 0, sortBy = 'id'): string {
+                const url = `states?pageSize=${pageSize}&pageNo=${pageNo}&sortBy=${sortBy}`;
                 return `${env.backend.baseUrl}/${url}`;
             }
         }
