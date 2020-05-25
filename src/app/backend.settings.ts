@@ -10,6 +10,12 @@ export class BackendAppSettings {
                 const url = `states?pageSize=${pageSize}&pageNo=${pageNo}&sortBy=${sortBy}`;
                 return `${env.backend.baseUrl}/${url}`;
             }
+        },
+        authenticate: {
+            getUrl(): string {
+                const url = `authenticate`;
+                return `${env.backend.baseUrl}/${url}`;
+            }
         }
     };
 }
